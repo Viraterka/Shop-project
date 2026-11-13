@@ -1,5 +1,5 @@
 {
-  "name": "shop-ui-2.2",
+  "name": "shop-ui-2.5",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -8,9 +8,11 @@
     "check": "biome check --write",
     "dev": "rsbuild",
     "format": "biome format --write",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.4",
     "antd": "^6.7.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
