@@ -5,6 +5,7 @@ import App from './App';
 import { ClientsPage } from './pages/clients/ui/ClientsPage';
 import { GoodsPage } from './pages/goods/ui/GoodsPage';
 import { ShopsPage } from './pages/shops/ui/ShopsPage';
+import { Routings } from './shared/routing/routings';
 
 const router = createBrowserRouter([
   {
@@ -12,15 +13,15 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'clients',
+        path: Routings.client.list.path,
         element: <ClientsPage />,
       },
       {
-        path: 'goods',
+        path: Routings.good.list.path,
         element: <GoodsPage />,
       },
       {
-        path: 'shops',
+        path: Routings.shop.list.path,
         element: <ShopsPage />,
       },
     ],

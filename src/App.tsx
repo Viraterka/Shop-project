@@ -1,29 +1,32 @@
 import './App.css';
 import { Layout, Menu } from 'antd';
 import { NavLink, Outlet } from 'react-router';
+import { Routings } from './shared/routing/routings';
 
 const { Header, Content, Footer } = Layout;
 
-// Пункт 10: массив menuItems объявляется за пределами компонента
 const menuItems = [
   {
+    key: 'home',
+    label: <NavLink to={Routings.home.toNavigate()}>Домой</NavLink>,
+  },
+  {
     key: 'shops',
-    label: <NavLink to="/shops">Магазины</NavLink>,
+    label: <NavLink to={Routings.shop.list.toNavigate()}>Магазины</NavLink>,
   },
   {
     key: 'clients',
-    label: <NavLink to="/clients">Клиенты</NavLink>,
+    label: <NavLink to={Routings.client.list.toNavigate()}>Клиенты</NavLink>,
   },
   {
     key: 'goods',
-    label: <NavLink to="/goods">Товары</NavLink>,
+    label: <NavLink to={Routings.good.list.toNavigate()}>Товары</NavLink>,
   },
 ];
 
 const App = () => {
   return (
     <Layout style={{ height: '100%', width: '100%' }}>
-      {/* Пункт 10: Меню в шапке */}
       <Header>
         <Menu
           theme="dark"
@@ -33,12 +36,10 @@ const App = () => {
         />
       </Header>
 
-      {/* Пункт 9 и 11: Content с Outlet для отображения страниц */}
       <Content style={{ padding: '24px', backgroundColor: '#fff' }}>
         <Outlet />
       </Content>
 
-      {/* Пункт 9: Footer с текстом */}
       <Footer style={{ textAlign: 'center' }}>
         Система мониторинга shop-ui
       </Footer>
