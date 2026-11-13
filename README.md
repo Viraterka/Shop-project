@@ -4,9 +4,9 @@
 
 Проект развивается по заданиям 2.1–2.5. Каждое задание сохранено отдельной веткой; ветка `main` содержит последнюю версию — **2.5**.
 
-## Текущая версия: 2.2
+## Текущая версия: 2.3
 
-Маршруты React Router, вложенные страницы, Outlet и навигация через NavLink.
+Каркас Ant Design: Header, Content, Footer и горизонтальное меню.
 
 ## Задания
 
@@ -36,7 +36,7 @@ npm run dev
 Для запуска определённого задания переключите ветку и установите его зависимости:
 
 ```bash
-git switch task-2.2
+git switch task-2.3
 npm ci
 npm run dev
 ```
@@ -65,6 +65,6 @@ rsbuild.config.ts   Настройки сборки
 
 ## Технологии
 
-React · TypeScript · Rsbuild · Biome · React Router
+React · TypeScript · Rsbuild · Biome · React Router · Ant Design
 
 Исходный код и lock-файл хранятся в Git. Папки `node_modules` и `dist`, локальные настройки и служебные файлы исключены из репозитория.

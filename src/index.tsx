@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'clients', // Без слеша в начале!
+        path: 'clients',
         element: <ClientsPage />,
       },
       {
