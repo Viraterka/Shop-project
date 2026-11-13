@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.rsbuild/
+.rspack-profile-*/
+
+# Local settings
+.env
+.env.*
+!.env.example
+*.local
+*.log*
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
