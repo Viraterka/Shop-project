@@ -1,15 +1,20 @@
-import { ClientsPage } from './pages/clients/ui/ClientsPage';
-import { GoodsPage } from './pages/goods/ui/GoodsPage';
-import { ShopsPage } from './pages/shops/ui/ShopsPage';
+import './App.css';
+import { NavLink, Outlet } from 'react-router';
 
 const App = () => {
   return (
-    <div>
-      <ClientsPage />
+    <div className="content">
+      <h1>Главная страница</h1>
+
+      <nav>
+        <NavLink to="/clients">Клиенты</NavLink> |{' '}
+        <NavLink to="/goods">Товары</NavLink> |{' '}
+        <NavLink to="/shops">Магазины</NavLink>
+      </nav>
+
       <hr />
-      <GoodsPage />
-      <hr />
-      <ShopsPage />
+
+      <Outlet />
     </div>
   );
 };
